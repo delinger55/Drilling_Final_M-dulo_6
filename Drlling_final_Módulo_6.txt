@@ -1,0 +1,50 @@
+--Activar entorno virtual: myentorno/Scripts/activate
+--entrar a la carpeta del proyecto: cd proyecto_vehiculos_django
+-- Levantar el servidor: Python manage.py runserver
+
+
+
+PS C:\Users\Enzo\OneDrive\Escritorio\Drilling_Final_Módulo_6> python -m venv myentorno
+
+PS C:\Users\Enzo\OneDrive\Escritorio\Drilling_Final_Módulo_6> myentorno/Scripts/activate
+
+(myentorno) PS C:\Users\Enzo\OneDrive\Escritorio\Drilling_Final_Módulo_6> pip install django
+
+(myentorno) PS C:\Users\Enzo\OneDrive\Escritorio\Drilling_Final_Módulo_6> django-admin startproject proyecto_vehiculos_django
+
+(myentorno) PS C:\Users\Enzo\OneDrive\Escritorio\Drilling_Final_Módulo_6> cd .\proyecto_vehiculos_django\
+
+(myentorno) PS C:\Users\Enzo\OneDrive\Escritorio\Drilling_Final_Módulo_6\proyecto_vehiculos_django> django-admin startapp vehiculo
+
+--Agregar en settings.py la app vehiculo: INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'vehiculo',
+]
+
+--Crear modelos en models.py
+
+(myentorno) PS C:\Users\Enzo\OneDrive\Escritorio\Drilling_Final_Módulo_6\proyecto_vehiculos_django> python manage.py makemigrations 
+(myentorno) PS C:\Users\Enzo\OneDrive\Escritorio\Drilling_Final_Módulo_6\proyecto_vehiculos_django> python manage.py migrate
+
+--Crear super usuario:
+Username: admin
+Email address: admin@gmail.com
+Password:12345 
+
+--Usuarios con permiso para ver el catalogo: 
+Usuario: Carlos512
+Contraseña: sol900paz
+
+Usuario: Nek812
+Contraseña: tierra100mar
+
+Usuario: Maria
+Contraseña: pez500lun
+
+
+
